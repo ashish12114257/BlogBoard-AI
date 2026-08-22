@@ -5,8 +5,7 @@
 // React components expect happens here so components never need to know about
 // backend field names.
 
-const API_BASE_URL = 'https://blogboard-ai.onrender.com';
-
+const API_BASE_URL = 'https://blogboard-ai.onrender.com/api';
 // ---------------------------------------------------------------------------
 // Category presentation metadata (colors + short labels).
 // The backend only stores name/slug/description; color is purely cosmetic.
