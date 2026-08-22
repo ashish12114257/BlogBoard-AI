@@ -5,7 +5,7 @@
 // React components expect happens here so components never need to know about
 // backend field names.
 
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'https://blogboard-ai.onrender.com';
 
 // ---------------------------------------------------------------------------
 // Category presentation metadata (colors + short labels).
