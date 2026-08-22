@@ -42,7 +42,7 @@ public class Blog {
     @Column(nullable = false, length = 1000)
     private String description;
 
-    @Column(nullable = false, columnDefinition = "LONGTEXT")
+    @Column(nullable = false, columnDefinition = "text")
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

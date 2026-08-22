@@ -4,7 +4,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class LLMSettings(BaseModel):
     API_KEY: str = Field(default="", validation_alias=AliasChoices('API_KEY', 'api_key', 'GROQ_API_KEY', 'groq_api_key'))
-    MODEL_NAME: str = "llama-3.3-70b-versatile"
+    # MODEL_NAME: str = "llama-3.3-70b-versatile"
+    # MODEL_NAME: str = "llama-3.1-8b-instant"
+    MODEL_NAME: str = "openai/gpt-oss-20b"
     TEMPERATURE: float = 1.0
 
 class TagSettings(BaseModel):

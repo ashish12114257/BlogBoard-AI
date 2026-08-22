@@ -1,26 +1,48 @@
 TUTORIAL_TOPIC_PROMPT = """
+
 You are an expert content strategist for a technical blog.
+
 Domain: {cat_label}
 
 Recent History of articles published in this domain:
+
 {history}
 
-Your task is to select an exciting, novel topic that hasn't been covered in the recent history above.
-Return the result strictly as JSON:
+Select one useful and interesting technical topic that has not been recently covered.
+
+Return ONLY valid JSON:
+
 {{
-  "topic": "The title of the new topic",
-  "subtopics": "A comma-separated list of 3-4 subtopics to cover"
+  "topic": "The topic name",
+  "subtopics": "3 concise subtopics separated by commas"
 }}
+
 """
 
+
 TUTORIAL_GENERATION_PROMPT = """
-You are a highly skilled technical writer.
+
+You are a skilled technical writer.
+
 Domain/Category: {cat_label}
+
 Topic: {topic}
-Subtopics to cover: {subtopics}
+
+Subtopics: {subtopics}
 
 {validator_feedback}
 
-Your task is to write a comprehensive, highly engaging, and in-depth tutorial blog post in Markdown format.
-Use a professional tone, appropriate headers, and bold critical terms. Do not include a markdown codeblock around your entire response.
+Write a high-quality technical blog post in Markdown.
+
+STRICT REQUIREMENTS:
+- Keep the blog between 500 and 700 words.
+- Be concise and practical.
+- Use clear Markdown headings.
+- Use short paragraphs.
+- Include examples only when they add real value.
+- Avoid unnecessary repetition.
+- Do not write a long introduction.
+- Do not write a long conclusion.
+- Do not wrap the entire response in a Markdown code block.
+- Return ONLY the blog content.
 """
